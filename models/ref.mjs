@@ -15,7 +15,7 @@ const refSchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
-    favoritedUsers: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
+    favedUsers: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
     studies: [{ type: mongoose.Schema.Types.ObjectId, ref: "Study" }],
   },
   { timestamps: true }

@@ -6,12 +6,14 @@ import commentRoutes from "./routes/commentRoutes.mjs";
 import studyRoutes from "./routes/studyRoutes.mjs";
 import userRoutes from "./routes/userRoutes.mjs";
 import db from "./db/conn.mjs";
+import cors from "cors";
 
 const PORT = process.env.PORT || 5000;
 const app = express();
 
+// middlewares
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("hello!");
