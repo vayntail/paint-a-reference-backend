@@ -4,6 +4,7 @@ dotenv.config();
 import refRoutes from "./routes/refRoutes.mjs";
 import commentRoutes from "./routes/commentRoutes.mjs";
 import studyRoutes from "./routes/studyRoutes.mjs";
+import uploadRoutes from "./routes/uploadRoutes.mjs";
 import userRoutes from "./routes/userRoutes.mjs";
 import db from "./db/conn.mjs";
 import cors from "cors";
@@ -23,6 +24,7 @@ app.use("/api/refs", refRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/studies", studyRoutes);
 app.use("/api/comments", commentRoutes);
+app.use("/api/upload", uploadRoutes);
 
 app.listen(PORT, () => {
   console.log(`server is ready on port: https://localhost:${PORT}`);
