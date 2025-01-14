@@ -13,7 +13,8 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 
 // middlewares
-app.use(express.json());
+app.use(express.json({ limit: "10mb" }));
+app.use(express.urlencoded({ limit: "10mb", extended: true }));
 app.use(cors());
 
 app.get("/", (req, res) => {
@@ -24,7 +25,7 @@ app.use("/api/refs", refRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/studies", studyRoutes);
 app.use("/api/comments", commentRoutes);
-app.use("/api/upload", uploadRoutes);
+app.use("/upload", uploadRoutes);
 
 app.listen(PORT, () => {
   console.log(`server is ready on port: https://localhost:${PORT}`);
