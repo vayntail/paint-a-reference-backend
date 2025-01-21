@@ -6,12 +6,100 @@ Comments and studies are currently not being used and still under development.
 ## Refs
 ### Get all ref photos
 `GET /api/refs`
-### Response
-    curl -i -H 'Accept: application/json' http://localhost:7000/thing/
+    Returns a list of refs
+    
+### Create a new ref photo
+`POST /api/refs`
+    Returns a ref object
+#### Request body
+    {"_id":"678fbe365b3b07d56ba36956",
+    "imageUrl":"https://i.ibb.co/d2k16mX/9ee4870f3515.png",
+    "type":"Animation",
+    "tags":[],
+    "uploadedBy":"678fbe225b3b07d56ba36952",
+    "favedUsers":[],
+    "studies":[],
+    "uploadDate":"2025-01-21T15:33:10.505Z",
+    "createdAt":"2025-01-21T15:33:10.506Z",
+    "updatedAt":"2025-01-21T15:33:10.506Z","__v":0}
+#### Response
+    {"_id":"678fbe365b3b07d56ba36956",
+    "imageUrl":"https://i.ibb.co/d2k16mX/9ee4870f3515.png",
+    "type":"Animation",
+    "tags":[],
+    "uploadedBy":"678fbe225b3b07d56ba36952",
+    "favedUsers":[],
+    "studies":[],
+    "uploadDate":"2025-01-21T15:33:10.505Z",
+    "createdAt":"2025-01-21T15:33:10.506Z",
+    "updatedAt":"2025-01-21T15:33:10.506Z","__v":0}
+    
+### Get a specific ref
+`GET /api/refs/:id`
+    Returns a ref object by id
+    
+### Edit a ref photo
+`PUT /api/refs/:id`
+    Return the changed ref
+    
+### Delete a ref photo
+`DELETE /api/refs/:id`
+    Returns a deleted message
 
+### Favorite a ref
+`POST /api/refs/:id/fav`
+    Returns the favorited ref
+
+---
 
 ## Users
 ### Get all ref photos
 `GET /api/refs`
-### Response
-    curl -i -H 'Accept: application/json' http://localhost:7000/thing/
+    Returns a list of refs
+    
+### Create a new ref photo
+`POST /api/refs`
+    Returns a ref object
+#### Request body
+    {"_id":"678fbe365b3b07d56ba36956",
+    "imageUrl":"https://i.ibb.co/d2k16mX/9ee4870f3515.png",
+    "type":"Animation",
+    "tags":[],
+    "uploadedBy":"678fbe225b3b07d56ba36952",
+    "favedUsers":[],
+    "studies":[],
+    "uploadDate":"2025-01-21T15:33:10.505Z",
+    "createdAt":"2025-01-21T15:33:10.506Z",
+    "updatedAt":"2025-01-21T15:33:10.506Z","__v":0}
+#### Response
+    {"_id":"678fbe365b3b07d56ba36956",
+    "imageUrl":"https://i.ibb.co/d2k16mX/9ee4870f3515.png",
+    "type":"Animation",
+    "tags":[],
+    "uploadedBy":"678fbe225b3b07d56ba36952",
+    "favedUsers":[],
+    "studies":[],
+    "uploadDate":"2025-01-21T15:33:10.505Z",
+    "createdAt":"2025-01-21T15:33:10.506Z",
+    "updatedAt":"2025-01-21T15:33:10.506Z","__v":0}
+    
+### Get a specific ref
+`GET /api/refs/:id`
+    Returns a ref object by id
+    
+### Edit a ref photo
+`PUT /api/refs/:id`
+    Return the changed ref
+    
+### Delete a ref photo
+`DELETE /api/refs/:id`
+    Returns a deleted message
+
+### Favorite a ref
+`POST /api/refs/:id/fav`
+    Returns the favorited ref
+
+
+
+
+
