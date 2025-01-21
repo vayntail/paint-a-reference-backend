@@ -15,6 +15,7 @@ const getRefs = async (req, res) => {
 const createRef = async (req, res) => {
   try {
     const ref = await Ref.create(req.body);
+    console.log(req.body);
     res.status(200).json(ref);
   } catch (err) {
     res.status(400).send(err);
