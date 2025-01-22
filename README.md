@@ -11,17 +11,6 @@ Comments and studies are currently not being used and still under development.
 ### Create a new ref photo
 `POST /api/refs`
     Returns a ref object
-#### Request body
-    {"_id":"678fbe365b3b07d56ba36956",
-    "imageUrl":"https://i.ibb.co/d2k16mX/9ee4870f3515.png",
-    "type":"Animation",
-    "tags":[],
-    "uploadedBy":"678fbe225b3b07d56ba36952",
-    "favedUsers":[],
-    "studies":[],
-    "uploadDate":"2025-01-21T15:33:10.505Z",
-    "createdAt":"2025-01-21T15:33:10.506Z",
-    "updatedAt":"2025-01-21T15:33:10.506Z","__v":0}
 #### Response
     {"_id":"678fbe365b3b07d56ba36956",
     "imageUrl":"https://i.ibb.co/d2k16mX/9ee4870f3515.png",
