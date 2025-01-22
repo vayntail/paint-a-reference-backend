@@ -21,5 +21,7 @@ const refSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+refSchema.index({ createdAt: 1 });
+
 const Ref = mongoose.model("Ref", refSchema);
 export default Ref;

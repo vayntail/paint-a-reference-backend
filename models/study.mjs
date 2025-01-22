@@ -16,5 +16,7 @@ const studySchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+studySchema.index({ createdAt: 1 });
+
 const Study = mongoose.model("Study", studySchema);
 export default Study;
